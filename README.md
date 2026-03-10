@@ -1,17 +1,17 @@
-# Automated Remote Patient Monitoring (RPM) Workflow in OpenMRS
+Automated Remote Patient Monitoring (RPM) Workflow in OpenMRS
 
 Project Objective:
 This project simulates an end-to-end Remote Patient Monitoring (RPM) workflow in OpenMRS using Java Selenium and TestNG. It automates patient registration, device readings, care manager communication, and billing report validation.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Workflow
+Workflow
 
 End-to-end workflow: Login → Patient Registration → Device Enrollment → Vitals Submission → Communication → Billing Validation → Logout
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Technologies Used
+Technologies Used
 
 - Programming Language: Java  
 - Automation Framework: Selenium WebDriver + TestNG  
@@ -23,42 +23,7 @@ End-to-end workflow: Login → Patient Registration → Device Enrollment → Vi
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Project Structure
-
-healthcare-rpm-automation/
-│
-├── pom.xml
-├── src/test/java
-│ ├── pages/
-│ │ ├── LoginPage.java
-│ │ ├── PatientRegistrationPage.java
-│ │ ├── DeviceEnrollmentPage.java
-│ │ ├── VitalsSubmissionPage.java
-│ │ ├── CommunicationPage.java
-│ │ ├── BillingReportPage.java
-│ │ └── PatientSearchPage.java
-│ │
-│ ├── tests/
-│ │ ├── LoginTest.java
-│ │ ├── PatientRegistrationTest.java
-│ │ ├── DeviceEnrollmentTest.java
-│ │ ├── VitalsSubmissionTest.java
-│ │ ├── CommunicationTest.java
-│ │ └── BillingReportTest.java
-│ │
-│ └── utils/
-│ ├── ConfigReader.java
-│ ├── TestDataGenerator.java
-│ └── ExcelReader.java
-│
-└── test-data/
-├── patients.csv
-├── device_readings.csv
-└── billing_rules.xlsx
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-# Sample Test Data
+Sample Test Data
 
 patients.csv
 
@@ -83,36 +48,36 @@ billing_rules.xlsx
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Test Cases
+Test Cases
 
-### Patient Registration
+->Patient Registration
 1. Login with valid/invalid credentials  
 2. Add patient using CSV data  
 3. Validate patient appears in dashboard  
 
-### Device / Vitals
+->Device / Vitals
 4. Assign device to patient  
 5. Submit vitals readings  
 6. Validate vitals in patient history  
 7. Trigger alert if vitals exceed thresholds  
 
-### Communication
+->Communication
 8. CM sends message to patient  
 9. Patient reply stored correctly  
 10. Validate timestamps and content  
 
-### Billing
+->Billing
 11. Validate CPT 99453 for enrolled patients  
 12. Validate CPT 99454 for submitted readings  
 13. Detect duplicate billing entries  
 
-### Patient Search / History
+->Patient Search / History
 14. Search patient by ID / Name  
 15. Validate complete history (visits, vitals, messages, billing)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Sample Screenshots
+Sample Screenshots
 
 *(Add screenshots of your tests, reports, and application pages)*
 
